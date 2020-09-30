@@ -6,7 +6,15 @@ app.use(cors());
 
 app.get("/about", (req, res, next) => {
     res.status(200).json({
-        message: "This works"
+        message: "This works",
+        method:"GET"
+    });
+})
+
+app.post("/about", (req, res, next) => {
+    res.status(200).json({
+        message: "This works",
+        method:"POST"
     });
 })
 
